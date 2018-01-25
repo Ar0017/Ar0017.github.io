@@ -5,9 +5,12 @@ body {
 h1 {
 	color: black;
 	background-color: gold;
+	text-align: center;
 }
 
 section {
 	color: black;
 	background-color: gold;
+	text-align: left;
+	font-style: italic;
 }
