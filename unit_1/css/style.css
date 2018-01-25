@@ -15,14 +15,3 @@ section {
 	text-align: left;
 	font-style: italic;
 }
-#name {
-	background: red;
-}
-
-#hex {
-	background: #ff0000;
-}
-
-#rgb {
-	background: rgb(255,0,0);
-}
