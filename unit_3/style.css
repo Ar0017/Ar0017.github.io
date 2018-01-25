@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background: url("https://gph.is/2jiZa0W");
+  background-size: cover;
+  color: #fff;
+  font-family: Helvetica;
+}
+
+hr {
+  width: 200px;
+}
+
+p {
+  font-size: 22px;
+}
