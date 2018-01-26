@@ -4,8 +4,7 @@ body {
   background-size: cover;
   color: #fff;
   font-family: Helvetica;
-  border: 2px solid black;
-}
+  }
 
 hr {
   width: 200px;
@@ -13,8 +12,4 @@ hr {
 
 p {
   font-size: 22px;
-}
-
-ul {
-	color: white;
 }
