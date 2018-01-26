@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  background: url("https://media.giphy.com/media/xUOxfpBYEIwxbbeoqQ/giphy.gif");
+  background-size: cover;
+  color: #fff;
+  font-family: Helvetica;
+  border: 2px solid black;
+}
+
+hr {
+  width: 200px;
+}
+
+p {
+  font-size: 22px;
+}
+
+ul {
+	color: white;
+}
