@@ -19,10 +19,6 @@ ul {
   width: 100%;
 }
 
-li {
-  display: inline;
-}
-
 a {
   outline: none;
   text-decoration: none;
@@ -31,4 +27,8 @@ a {
   text-align: center;
   line-height: 3;
   color: orange;
+}
+
+footer {
+  display:block;
 }
