@@ -1,22 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+
+@import url('https://fonts.googleapis.com/css?family=BioRhyme:300');
+
 body {
   text-align: center;
   background: url("https://media.giphy.com/media/xUOxfpBYEIwxbbeoqQ/giphy.gif");
   background-size: cover;
   color: #fff;
-  font-family: Helvetica;
-  }
+  font-family: 'BioRhyme', serif;
+}
+
+h1 {
+	font-family: 'Faster One', cursive;
+}
+
+main {
+	font-family: 'Quicksand', sans-serif;
+}
 
 hr {
   width: 200px;
 }
 
-p {
-  font-size: 22px;
+p  {
+  font-size: 22px;  
 }
 
 nav {
   padding: 0;
-  width: 100%;
+  width: 100%;  
 }
 
 a {
@@ -27,6 +41,7 @@ a {
   text-align: center;
   line-height: 3;
   color: orange;
+  font-family: 'BioRhyme', serif;
 }
 
 footer {
