@@ -63,5 +63,11 @@ footer {
   /* For mobile phones: */
   body {
     width:100%;
+    background-size: cover;
+  }
+
+  .groups {
+  	padding: 0;
+  width: 100%;
   }
 }
