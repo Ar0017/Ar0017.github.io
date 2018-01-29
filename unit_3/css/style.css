@@ -64,10 +64,5 @@ footer {
   body {
   	width: 100%;
     background-size: cover;
-    }
-
-  nav {
-  padding: 0;
-  width: 50%;  
-	}  
+    }  
 }
