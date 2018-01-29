@@ -61,10 +61,13 @@ footer {
 
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
-  body, main, footer, nav, a {
+  body {
     width: 100%;
-    max-width: 500px;
     background-size: cover;
-    padding: 0;
-  }
+    }
+
+  nav {
+  padding: 0;
+  width: 100%;  
+	}  
 }
