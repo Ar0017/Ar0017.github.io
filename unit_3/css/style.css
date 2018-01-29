@@ -63,7 +63,7 @@ footer {
   /* For mobile phones: */
   body {
   	width: 100%;
-    background-size: contain;
+    background-size: cover;
     }
 
   nav {
