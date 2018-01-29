@@ -12,6 +12,7 @@ body {
   background-size: cover;
   color: #fff;
   font-family: 'BioRhyme', serif;
+  font-size: 16px;
 }
 
 h1 {
@@ -23,9 +24,8 @@ main {
 }
 
 hr {
-  width: 200px;
+	width: 200px;
 }
-
 p  {
   font-size: 22px;  
 }
