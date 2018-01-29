@@ -63,5 +63,6 @@ footer {
   /* For mobile phones: */
   body, main, footer, nav, a {
     width: 100%;
+    max-width: 500px;
   }
 }
