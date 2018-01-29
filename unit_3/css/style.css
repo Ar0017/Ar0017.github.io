@@ -61,7 +61,7 @@ footer {
 
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
-  body, main, footer, {
-    width:100%;
+  body, main, footer, nav, a {
+    width: 100%;
   }
 }
