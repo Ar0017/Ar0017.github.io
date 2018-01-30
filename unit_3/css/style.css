@@ -29,6 +29,11 @@ hr {
 	border: 0.5px solid white;
 	margin: auto;
 }
+
+aside{
+	
+}
+
 p  {
   font-size: 22px;  
 }
@@ -37,10 +42,11 @@ a {
   outline: none;
   text-decoration: none;
   width: 19.5%;
-  margin-right: 0.625%;
+  margin: auto;
   text-align: center;
   line-height: 3;
   color: orange;
+  padding: 1px; 
 }
 
 nav {
@@ -60,8 +66,12 @@ footer {
 .groups {
 	font-family: 'Black Ops One', cursive;
 	font-size: 20px;
+	display: inline;
 }
 
+.link {
+
+}
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
   body {

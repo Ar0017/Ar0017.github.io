@@ -1,17 +1,36 @@
-body {
-	background-color: gold;
+
+header {
+    background-color: #FFED74;
+    border: 1px black solid;
+    padding: 20px; 
 }
 
-h1 {
-	color: black;
-	background-color: gold;
-	text-align: center;
-	text-decoration: underline;
+nav {
+	background-color: #E8C66A;
+	border: 1px black solid;
+    padding: 20px;
 }
 
-section {
-	color: black;
-	background-color: gold;
-	text-align: left;
-	font-style: italic;
+ section {
+	background-color: #FFE2B8;
+    border: 1px black solid;
+    padding: 20px;    
+}
+
+aside {
+    background-color: #FFC675;
+    border: 1px black solid;
+    padding: 20px;
+}
+
+article {
+	background-color: #E89C6C;
+    border: 1px black solid;
+    padding: 20px;
+}
+
+footer {
+	background-color: #FF957E;
+    border: 1px black solid;
+    padding: 20px;
 }
