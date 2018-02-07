@@ -55,12 +55,20 @@ nav {
 }
 
 footer {
-  padding: 20px;
+  padding: 120px;
   text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.home {
+	color: white;
 }
 
 .copyright {
 	 font-family: 'BioRhyme', serif;
+	 margin-right: 10px;
+  	margin-left: 10px;
 }
 
 .groups {
@@ -69,9 +77,11 @@ footer {
 	display: inline;
 }
 
-.link {
-
+.navlinks {
+	margin-right: 10px;
+  	margin-left: 10px;
 }
+
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
   body {
