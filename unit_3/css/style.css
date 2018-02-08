@@ -86,8 +86,8 @@ footer {
     and (min-device-width : 375px) // or 213.4375em or 3in or 9cm
     and (max-device-width : 667px) {
       body {
-    /*width: 100%;*/
-    /*height: 100%;*/
+    width: 100%;
+    height: 100%;
     background-size: cover;
     position: absolute; 
     top: 0; 
