@@ -82,7 +82,7 @@ footer {
   	margin-left: 10px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 667px) {
   /* For mobile phones: */
   body {
   	width: 100%;
