@@ -148,7 +148,7 @@ main {
     clear: both;
 }
 
-.articles {
+#articles {
   /*  float: left;
     width: 25%;*/
     padding: 10px;
@@ -217,6 +217,12 @@ footer {
   	padding: auto;
   	margin: auto;
   	border: 1px;
+}
+
+@media screen and (max-width: 740px) {
+	.hero {
+		padding: initial;
+	}
 }
 
 @media screen and (max-width: 650px) {
