@@ -291,3 +291,10 @@ footer {
 		display: none;
 	}
 }
+
+@media screen and (max-width: 670px) {
+	main {
+		width: auto;
+		margin: 10px;
+	}
+}
