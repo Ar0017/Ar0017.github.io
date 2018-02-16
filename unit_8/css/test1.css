@@ -278,6 +278,11 @@ footer {
 		display: none;
 	}
 
+	main {
+		width: auto;
+		margin: 10px;
+	}
+
 	.gallerybtn {
 		display: block;
 	}
