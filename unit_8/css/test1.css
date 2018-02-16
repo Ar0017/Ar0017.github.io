@@ -228,11 +228,12 @@ aside h1 {
 
 footer {
    width: 100%;
-   background-color: rgba(0, 0, 0, 0.7);
-   color: rgb(0, 255, 255);
+   background-color: rgb(0, 0, 0);
+   color: white;
    text-align: center;
-   padding: 1px;
+   padding: 1em;
 }
+
 .maincontent a:hover {
 	background-color: #00bfffb8;
 	color: black;
