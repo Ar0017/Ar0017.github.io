@@ -297,4 +297,16 @@ footer {
 		width: auto;
 		margin: 10px;
 	}
+
+	aside {
+		display: none;
+	}
+
+	.gallerybtn {
+		display: block;
+	}
+
+	.tohide {
+		display: none;
+	}
 }
