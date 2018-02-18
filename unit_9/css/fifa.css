@@ -52,6 +52,17 @@ h1 {
 }
 
 
+@media only screen and (max-width: 570px) {
+
+	h1 {
+    margin: 1em .2em 1em .2em;
+    /* padding: 3em 0 1em; */
+    font-size: 5em;
+    color: white;
+	}
+}
+
+
 /*nav {
 	background-color: #000000c9;
     border-bottom: 1px solid red;
