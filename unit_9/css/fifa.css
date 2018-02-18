@@ -52,7 +52,7 @@ h1 {
 }
 
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 300px) {
 
 	body {
 	background: url(http://img.fifa.com/mm/photo/tournament/competition/02/90/83/57/2908357_full-lnd.jpg);
@@ -69,6 +69,22 @@ h1 {
 	}
 }
 
+@media only screen and (max-width: 670px) {
+	body {
+    background: url(http://img.fifa.com/mm/photo/tournament/competition/02/90/83/57/2908357_full-lnd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: initial;
+	}
+
+	h1 {
+    /* margin: 5em 5em 0; */
+    padding: 1.5em 0 .1em;
+    font-size: 5em;
+    color: white;
+	}
+
+}
 
 /*nav {
 	background-color: #000000c9;
