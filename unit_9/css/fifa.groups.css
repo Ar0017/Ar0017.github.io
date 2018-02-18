@@ -57,6 +57,10 @@ nav a:hover {
 	color: black;
 }
 
+.tohide {
+	display: none;
+}
+
 main {
 	max-width: 1200px;
 	width: 96%;
@@ -132,11 +136,16 @@ footer:after {
 }
 
 @media only screen and (max-width: 570px) {
+	.tohide {
+		display: block;
+	}
+
 	.footernav {
-		float: none;
+		display: none;
+		/*float: none;
 		line-height: 1em;
 		text-align: center;
-		margin: 1em;
+		margin: 1em;*/
 	}
 
 	.rights {

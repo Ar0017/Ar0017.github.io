@@ -3,13 +3,13 @@
 	margin: 0;
 }
 
-body {
+/*body {
 	background: url(http://www.secretflying.com/wp-content/uploads/2017/10/world-cup-2018.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: center;
-}
+}*/
 
 label, #toggle, nav {
 	float: right;
@@ -33,9 +33,21 @@ label, #toggle {
   	margin: auto;
   	display: none;
 }
-.mainsection {
+
+.firstsection {
 	margin: 3em;
-	background-color: white;
+}
+
+.text {
+	margin: 3em;
+}
+
+.text h2 {
+	text-align: center;
+}
+
+.text p {
+	margin: 1em auto;
 }
 
 nav {
@@ -61,6 +73,9 @@ nav a:hover {
 	color: black;
 }
 
+.tohide {
+	display: none;
+}
 
 h1 {
 	text-align: center;
@@ -74,14 +89,13 @@ h3 {
 p {
 	margin: 1em auto;
 }
-/*footer {
+
+footer {
    width: 100%;
-   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.9);
    color: white;
    text-align: center;
    padding: 1em;
-       padding: 1em;
-    margin: 24.8em 0 0 0;
 }
 
 footer:after {
@@ -102,10 +116,10 @@ footer:after {
     line-height: 2em;
     border-bottom: none;
     padding: initial;
-    text-align: center; 
+    /*text-align: center; */
     margin: auto;
     width: initial;
-}*/
+}
 
 @media only screen and (max-width: 1090px) {
 	.groups {
@@ -117,11 +131,17 @@ footer:after {
 }
 
 @media only screen and (max-width: 570px) {
+
+	.tohide {
+		display: block;
+	}
+
 	.footernav {
-		float: none;
+		display: none;
+		/*float: none;
 		line-height: 1em;
 		text-align: center;
-		margin: 1em;
+		margin: 1em;*/
 	}
 
 	.rights {
