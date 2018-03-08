@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+}
+
+header {
+	text-align: center;
+	background-color: black;
+	color: white;
+	border-bottom: 3.5px solid lightblue;
+}
+
+header, h1, .hh3 {
+	margin: 0;
+}
+
+.hero {
+	width: 100%;
+	height: 662px;
+}
+
+table, th, td {
+	border: 2px solid black;
+}
+
+th, td {
+	padding: 1em;
+}
+h2 {
+	text-align: center;
+}
+
+h3, h4 {
+	text-align: center;
+}
+
+#reservation {
+	margin: 3em 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.res {
+    float: left;
+    padding: 37px;
+}
+
+.form {
+	width: 48%;
+	border: 2px solid black;
+	margin-right: 1em;
+	padding-top: 1em;
+	margin-top: 1.1em;
+}
+
+.table {
+	width: 48%;
+	margin-left: 1em;
+}
+
+#resInfo {
+	display: block;
+}
+
+.input1 {
+	margin-left: .5em;
+}
+
+.input2 {
+	margin-left: 1.5em;
+}
+
+table, th, td {
+	border: 2px solid block;
+	border-collapse: collapse;
+}
+
+.reviews::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.reviews {
+	background-color: #795548;
+	border: 2px solid black;
+	border-radius: 1em;
+	margin: 1em;
+}
+
+.revImg {
+	max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1em;
+}
+
+label {
+	display: table-caption;
+}
+
+.reviews p {
+	width: 48%;
+	float: right;
+}
+
+label {
+	margin-top: 2em;
+}
+
+textarea {
+	max-width: 100%;
+	margin-top: 1em;
+}
+
+button {
+	margin-top: 1em;
+}
+
+#reviews {
+	background-color: #9e9e9e;
+	border: 2px solid black;
+}
+
+.revForm {
+	margin: 1em;
+}

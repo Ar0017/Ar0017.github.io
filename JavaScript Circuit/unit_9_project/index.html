@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monk's Cafe</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	
+	<header>
+		<h1>Monk’s Cafe</h1>
+		<h3 class="hh3">“The Coffee Shop”</h3>
+	</header>
+
+	<img src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg" class="hero">
+
+	<hr>
+	
+	<!-- <div>
+		<h2>Welcome</h2>		
+	</div> -->
+
+	<div id="reservation">
+		<h2>Reservations</h2>
+
+		<div id="resInfo" class="clearfix">
+			<form id="resForm" class="res form">
+				Name:<input type="text" placeholder="Name" class="input1">
+				<br><br>
+				Day:<input type="text" placeholder="Day" class="input2">
+				<br><br>
+				<button>Confirm Reservation</button>
+			</form>
+
+			<table id="resvd" class="res table">
+			  <caption>Existing Reservation</caption>
+			  <tr>
+			    <th>Name</th>
+			    <th>Day</th>
+			  </tr>
+			  <tr>
+			    <td>John Doe</td>
+			    <td>Thursday</td>
+			  </tr>
+			  <tr>
+			    <td>Jane Doe</td>
+			    <td>Friday</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+
+	<hr>
+
+	<div id="map">
+		<h3>Come Dine With Us</h3>
+	</div>
+
+	<hr>
+
+	<div id="reviews">
+		<h4>Customer Reviews</h4>
+		<div class="reviews">							   
+			<img src="http://circuits-assets.generalassemb.ly/prod/asset/5474/jerry.jpg" class="revImg">
+			<p>“Big lettuce, big carrots, tomatoes like volleyballs.”<br><strong>-Jerry Seinfeld, on The BIG Salad</strong></p>   		    		    
+		</div>
+
+		<div class="revForm">
+			<label><strong>Reviews</strong><textarea placeholder="Write a Review"></textarea></label>
+			<button class="button alert">Submit Review</button>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/handlebars-v4.0.11.js"></script>
+	<script src="js/main.js"></script>
+	<!-- <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDbt1M_Y1NT5NIZ27O1y0L-PXT5-bEIjscallback=monksCafeMap" async defer></script>
+</body>
+</html>
