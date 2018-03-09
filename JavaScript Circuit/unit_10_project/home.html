@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>The Breakfast Club</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <div class="headerimage">
+    <div class="header">
+      <a href="#homepage" class="logo">The Breakfast Club</a>
+      <label for="toggle">Menu</label>
+      <input type="checkbox" id="toggle">
+      <nav class="navright">
+        <a href="home.html">Home</a>
+        <a href="#reservation">Reservation</a>        
+        <a href="#info">About</a>
+        <a href="#Contact">Contact</a>
+        <a href="#map">Map</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div id="bc">
+      <div class="herotext">
+        <h1>Welcome to The Breakfast Club!</h1>
+        <p>Healthy! Tasty! Refreshing!</p>
+        <button class="cta" href="#">Make An Order</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="reservation" class="clearfix">
+    <h2>Reservations</h2>
+
+    <form action="" class="res form">
+      <input id="name" type="text" placeholder="Name">
+      <input id="day" type="text" placeholder="Day">
+      <button type="submit">Confirm Reservation</button>
+    </form>
+
+      <!-- reservations -->
+    <table id="table" class="res table">     
+      <tr>
+        <th>Name</th>
+        <th>Day</th>
+      </tr>
+
+      <!-- template for reservation-list -->
+      <script id="reservation-template" type="text/x-handlebars-template">
+        <tr>
+          <td>{{name}}</td>
+          <td>{{day}}</td>
+        </tr>
+      </script>
+    </table>
+  </div>
+
+
+  <div id="map" class="locator"><strong>Come Dine With Us</strong></div>
+
+
+
+	<!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <!-- custom js -->
+  <script src="js/home.js"></script>
+  
+  <!-- google maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDbt1M_Y1NT5NIZ27O1y0L-PXT5-bEIjs&callback=initMap"
+  async defer></script>
+</body>
+</html>
