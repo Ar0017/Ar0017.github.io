@@ -38,10 +38,18 @@
   <div id="reservation" class="clearfix">
     <h2>Reservations</h2>
 
-    <form action="" class="res form">
-      <input id="name" type="text" placeholder="Name">
-      <input id="day" type="text" placeholder="Day">
-      <button type="submit">Confirm Reservation</button>
+    <form action="" id="form" class="res form">
+      <input id="name" type="text" placeholder="Name" required="">
+      <select id="daysOpen" required="">
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+      </select>
+      <!-- <input id="day" type="text" placeholder="Day"> -->
+      <button type="submit">Confirm Reservation</button><br>
+      <button type="number" id="resEdit">Edit/Check Reservation</button>
     </form>
 
       <!-- reservations -->
@@ -58,9 +66,25 @@
           <td>{{day}}</td>
         </tr>
       </script>
+
+      <!-- template for reservation-list -->
+      <script id="reservation-template" type="text/x-handlebars-template">
+        <tr>
+          <td>{{name}}</td>
+          <td>{{day}}</td>
+        </tr>
+      </script>
     </table>
   </div>
 
+  <hr>
+
+  <div>
+   <p id="resInfo"></p><br>
+   <strong class="rsNum"></strong>
+  </div>
+
+  <hr>
 
   <div id="map" class="locator"><strong>Come Dine With Us</strong></div>
 
@@ -78,7 +102,8 @@
   <script src="js/home.js"></script>
   
   <!-- google maps -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDbt1M_Y1NT5NIZ27O1y0L-PXT5-bEIjs&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeznMaw0iC0LNvCZhxcW9tcI06LXbT7bM&callback=initMap"
   async defer></script>
 </body>
 </html>
+

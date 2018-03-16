@@ -100,7 +100,7 @@ button {
 	padding: 0 20px;
 	border-radius: 10px;
 	margin: 5px auto;
-	padding: 10px 20px;
+	padding: 10px 5px;
 }
 
 button:hover {
@@ -139,10 +139,6 @@ button:active {
 .herotext p {
 	font-size: 0.750em;
 	letter-spacing: 1px;
-}
-
-form {
-	display: block;
 }
 
 input {
@@ -202,6 +198,8 @@ form {
     width: 48%;
     border: 2px solid black;
     margin-top: 1.1em;
+    display: block;
+    margin-left: .7em;
 }
 
 .table {

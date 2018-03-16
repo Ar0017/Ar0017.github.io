@@ -1,10 +1,12 @@
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyC0D9YD9P2MHebt2EbXxqldb9Z8kFMCklY",
-  authDomain: "restaurant-site.firebaseapp.com",
-  databaseURL: "https://restaurant-site.firebaseio.com",
-  storageBucket: "restaurant-site.appspot.com",
-};
+  var config = {
+    apiKey: "AIzaSyBPiVn-cbiZo1zjqVzk3sx41tp7FDYyMMg",
+    authDomain: "reservation-site-fd8b6.firebaseapp.com",
+    databaseURL: "https://reservation-site-fd8b6.firebaseio.com",
+    projectId: "reservation-site-fd8b6",
+    storageBucket: "reservation-site-fd8b6.appspot.com",
+    messagingSenderId: "599039498485"
+  };
 
 firebase.initializeApp(config);
 
@@ -15,7 +17,7 @@ $('form').on('submit', function (e) {
 	e.preventDefault();
 	var source = $("#reservation-template").html();
 	var template = Handlebars.compile(source);
-	var context = {name: $('#name').val(), day: $('#day').val()};
+	var context = {name: $('#name').val(), day: $('#daysOpen').val()};
 	var html = template(context);
 	$('#table').append(html);
 });
@@ -47,12 +49,72 @@ function initMap() {
 }
 
 
+$('#form').on('submit', function (e) {
+  // prevent the page from reloading
+  e.preventDefault();
 
-// Day Validation
-// function dayVal() {
-// 	var daysOpen = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-	
-// 	if ($(#day).val() !== daysOpen[0] || daysOpen[1] || daysOpen[2] || daysOpen[3] || daysOpen[4] || daysOpen[5]) {
-// 		alert('Please enter a a day of the week, except Sunday');
-// 	}
+  // grab user's comment from input field
+  var userName = $('#name').val();
+  var userDay = $('#daysOpen').val();
+
+
+  var resNum = Math.floor(Math.random() * 100000) + 1;
+  alert(userName + ' your Reservation Number is ' + resNum);
+  // clear the user's comment from the input (for UX purposes)
+  $('#name').val('')
+  // $('#day').val('')
+  // create a section for comments data in your db
+  var reservationReference = database.ref('Reservation-Data');
+  // use the set method to save data to the comments
+  reservationReference.push({
+    name: userName,
+    day: userDay,
+    resNumber: resNum
+  });
+});
+
+
+// Get Data
+$('#resEdit').on('click', function() {
+  var cstChk = alert('Sorry, this function is under construction.');
+
+  // prompt('Please enter your reservation number');
+
+  // $.ajax({
+  //   type: "GET",
+  //   url: "https://reservation-site-fd8b6.firebaseio.com",
+  //   data: {resNumber: cstChk},
+  //   success: function(response) {
+  //     $('#resInfo').html('Good day ' + response.name);
+  //     $('.rsNum').html('Your reservation number is ' + response.resNumber);
+  //   },
+  // });
+});
+
+
+
+
+
+
+
+
+
+// $('#resEdit').on('click', function(e) {
+//   e.preventDefault();
+//   var cstChk = prompt('Please enter your reservation number.');
+
+//   database.ref('Reservation-Data').on('value', function (results) {
+//     var getResData = results.val();
+//     var data = [];
+
+//     for (var check in getResData)
+//   });
+// })
+
+// function getResData() {
+//   // Listen for changes in comments data
+//   database.ref('Reservation-Data').on('value', function (results) {
+//     // Get all comments stored in the results we received back from Firebase
+//     // Update the DOM
+//   });
 // }
