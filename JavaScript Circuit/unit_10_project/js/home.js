@@ -13,11 +13,11 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // Make a reservation
-$('form').on('submit', function (e) {
+$('#form').on('submit', function (e) {
 	e.preventDefault();
 	var source = $("#reservation-template").html();
 	var template = Handlebars.compile(source);
-	var context = {name: $('#name').val(), day: $('#daysOpen').val()};
+	var context = {name: $('#name').val(), day: $('#day').val(), time: $('#time').val()};
 	var html = template(context);
 	$('#table').append(html);
 });
@@ -55,7 +55,8 @@ $('#form').on('submit', function (e) {
 
   // grab user's comment from input field
   var userName = $('#name').val();
-  var userDay = $('#daysOpen').val();
+  var userDay = $('#day').val();
+  var userTime = $('#time').val();
 
 
   var resNum = Math.floor(Math.random() * 100000) + 1;
@@ -69,27 +70,104 @@ $('#form').on('submit', function (e) {
   reservationReference.push({
     name: userName,
     day: userDay,
+    time: userTime,
     resNumber: resNum
   });
 });
 
 
 // Get Data
-$('#resEdit').on('click', function() {
-  var cstChk = alert('Sorry, this function is under construction.');
+// Get the modal
+var modal = document.getElementById('myMod');
 
-  // prompt('Please enter your reservation number');
+// Get the button that opens the modal
+var btn = document.getElementById("resEdit");
 
-  // $.ajax({
-  //   type: "GET",
-  //   url: "https://reservation-site-fd8b6.firebaseio.com",
-  //   data: {resNumber: cstChk},
-  //   success: function(response) {
-  //     $('#resInfo').html('Good day ' + response.name);
-  //     $('.rsNum').html('Your reservation number is ' + response.resNumber);
-  //   },
-  // });
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+
+// Res info
+var rsnam = $('.rsnam').val();
+var rsnum = $('.rsnum').val();
+
+//Check reservartion
+$('#modForm').on('submit', function(e) {
+  e.preventDefault();
+  $('#res-dat').html('Sorry you are not reserved at the Breakfast Club')
+//   var rsnum = $('.rsnum').val();
+
+  // var ref = firebase.database().ref('Reservation-Data');
+  // ref.orderByChild('resNumber').equalTo(rsnum).on("child_added", function(snapshot) {
+  // if (rsnum === resNumber) {
+  //     $('#res-dat').html('reserved');
+  //   } else {
+  //     $('#res-dat').html('no');
+  //   }
+  // console.log(snapshot.key + " was " + snapshot.val().height + " m tall");
 });
+
+    
+  
+  // database.ref('comments').on('value', function (results) {
+    // Get all comments stored in the results we received back from Firebase
+    // Update the DOM
+  // });
+// });
+
+
+
+  // $.get(
+  //   'https://reservation-site-fd8b6.firebaseio.com/Reservation-Data',
+  //   {resNumber: rsnum},
+  //   function(response) {
+          // if (true) {
+  //     $('#res-dat').html('Good day ' + response.name + ', ' + 'your are reserved for ' + response.day + ' ' + response.time + ' and your reservation no. is ' + response.resNumber);
+              // } else {
+                // $('#res-dat').html('Sorry, you are not reserved at The Breakfast Club.')
+              // }
+  //   }
+  // );
+// });
+
+
+// Cancel Reservation
+$('#cnclprmt').hide();
+$('#yes').hide();
+$('#no').hide();
+
+$('.cncl').on('click', function() {
+  $('#cnclprmt').show();
+  $('#yes').show();
+  $('#no').show();
+  // $('#modForm').hide();
+});
+
+$('#no').on('click', function() {
+  $('#cnclprmt').hide();
+  $('#yes').hide();
+  $('#no').hide();
+})
+
+$('#yes').on('click', function() {
+  alert('This function is under construction');
+  $('#cnclprmt').hide();
+  $('#yes').hide();
+  $('#no').hide();
+})
+
+
 
 
 

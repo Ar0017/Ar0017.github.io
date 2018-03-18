@@ -10,7 +10,7 @@
 
   <div class="headerimage">
     <div class="header">
-      <a href="#homepage" class="logo">The Breakfast Club</a>
+      <a href="home.html" class="logo">The Breakfast Club</a>
       <label for="toggle">Menu</label>
       <input type="checkbox" id="toggle">
       <nav class="navright">
@@ -40,16 +40,15 @@
 
     <form action="" id="form" class="res form">
       <input id="name" type="text" placeholder="Name" required="">
-      <select id="daysOpen" required="">
-        <option>Monday</option>
-        <option>Tuesday</option>
-        <option>Wednesday</option>
-        <option>Thursday</option>
-        <option>Friday</option>
+      <input type="date" id="day" min="2018-04-01" max="2018-08-31" required="">
+      <select id="time" required="">
+        <option>Early Morning</option>
+        <option>Morning</option>
+        <option>Brunch</option>        
       </select>
       <!-- <input id="day" type="text" placeholder="Day"> -->
       <button type="submit">Confirm Reservation</button><br>
-      <button type="number" id="resEdit">Edit/Check Reservation</button>
+      <button type="number" id="resEdit" form="modForm">Edit/Check Reservation</button>
     </form>
 
       <!-- reservations -->
@@ -57,6 +56,7 @@
       <tr>
         <th>Name</th>
         <th>Day</th>
+        <th>Time</th>
       </tr>
 
       <!-- template for reservation-list -->
@@ -64,27 +64,62 @@
         <tr>
           <td>{{name}}</td>
           <td>{{day}}</td>
+          <td>{{time}}</td>
         </tr>
       </script>
 
       <!-- template for reservation-list -->
-      <script id="reservation-template" type="text/x-handlebars-template">
+      <!-- <script id="reservation-template" type="text/x-handlebars-template">
         <tr>
           <td>{{name}}</td>
           <td>{{day}}</td>
+          <td>{{time}}</td>
         </tr>
-      </script>
+      </script> -->
     </table>
   </div>
 
   <hr>
 
-  <div>
-   <p id="resInfo"></p><br>
-   <strong class="rsNum"></strong>
+  <!-- <div class="bg"> -->
+    <!-- <button id="mBtn"><strong>ENTER</strong></button> -->    
   </div>
 
-  <hr>
+  <div id="myMod" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h1>Reservation Lookup.</h1>  
+        </div>
+        <div class="modQuest">
+          <form id="modForm">
+            
+            <input type="text" class="rsnam" required placeholder="Name">
+            <input type="number" class="rsnum" required placeholder="Reservation No." maxlength="6">
+            <button type="submit" class="sub" form="modForm">Check Reservation</button>
+            <button type="button" class="cncl">Cancel Reservation</button>
+            <hr>
+            <strong id="cnclprmt">Are you sure you want to cancel your reservation?</strong>
+            <button id="yes">Yes</button><button id="no">No</button>                                           
+          </form>
+
+          <hr>
+
+          <strong id="res-dat"></strong>
+          <div id="cnclFrm">
+            
+          </div>
+
+          <!-- <button class="cnclgate"></button>           -->
+          <!-- <form id="cnclFrm">
+            <input type="text" class="resnam" required placeholder="Name">
+            <input type="number" class="resnum" required placeholder="Reservation No." maxlength="6">
+            <button type="" id="cncl">Cancel Reservation</button>              
+          </form> -->                   
+        </div>
+      </div>
+    </div>
 
   <div id="map" class="locator"><strong>Come Dine With Us</strong></div>
 
