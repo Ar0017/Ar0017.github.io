@@ -98,18 +98,16 @@
             <input type="text" class="rsnam" required placeholder="Name">
             <input type="number" class="rsnum" required placeholder="Reservation No." maxlength="6">
             <button type="submit" class="sub" form="modForm">Check Reservation</button>
-            <button type="button" class="cncl">Cancel Reservation</button>
+            <button type="submit" class="cncl" form="modForm">Cancel Reservation</button>
             <hr>
             <strong id="cnclprmt">Are you sure you want to cancel your reservation?</strong>
-            <button id="yes">Yes</button><button id="no">No</button>                                           
+            <button id="yes" form="modForm">Yes</button><button id="no">No</button>                                           
           </form>
 
           <hr>
 
           <strong id="res-dat"></strong>
-          <div id="cnclFrm">
-            
-          </div>
+          
 
           <!-- <button class="cnclgate"></button>           -->
           <!-- <form id="cnclFrm">
@@ -126,7 +124,7 @@
 
 
 	<!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- bootstrap js -->

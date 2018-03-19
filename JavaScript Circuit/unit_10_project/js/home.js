@@ -76,6 +76,7 @@ $('#form').on('submit', function (e) {
 });
 
 
+
 // Get Data
 // Get the modal
 var modal = document.getElementById('myMod');
@@ -96,49 +97,28 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
+ function getComments() {
+  database.ref('Reservation-Data').on('value', function (results) {
+    // Get all comments stored in the results we received back from Firebase
+    var allReservations = results.val();
+    console.log('stuff')
+    console.log(allReservations)
+  });
+}
+
+getComments()
 
 
-// Res info
+
+//Check reservartion
 var rsnam = $('.rsnam').val();
 var rsnum = $('.rsnum').val();
 
-//Check reservartion
-$('#modForm').on('submit', function(e) {
-  e.preventDefault();
-  $('#res-dat').html('Sorry you are not reserved at the Breakfast Club')
-//   var rsnum = $('.rsnum').val();
 
-  // var ref = firebase.database().ref('Reservation-Data');
-  // ref.orderByChild('resNumber').equalTo(rsnum).on("child_added", function(snapshot) {
-  // if (rsnum === resNumber) {
-  //     $('#res-dat').html('reserved');
-  //   } else {
-  //     $('#res-dat').html('no');
-  //   }
-  // console.log(snapshot.key + " was " + snapshot.val().height + " m tall");
-});
-
-    
-  
-  // database.ref('comments').on('value', function (results) {
-    // Get all comments stored in the results we received back from Firebase
-    // Update the DOM
-  // });
-// });
-
-
-
-  // $.get(
-  //   'https://reservation-site-fd8b6.firebaseio.com/Reservation-Data',
-  //   {resNumber: rsnum},
-  //   function(response) {
-          // if (true) {
-  //     $('#res-dat').html('Good day ' + response.name + ', ' + 'your are reserved for ' + response.day + ' ' + response.time + ' and your reservation no. is ' + response.resNumber);
-              // } else {
-                // $('#res-dat').html('Sorry, you are not reserved at The Breakfast Club.')
-              // }
-  //   }
-  // );
+// var reservationReference = database.ref('Reservation-Data');
+//   ref.once('value').then(function(snapshot) {
+//   var userI = snapshot.val();
+//   console.log(userI);
 // });
 
 
@@ -167,32 +147,3 @@ $('#yes').on('click', function() {
   $('#no').hide();
 })
 
-
-
-
-
-
-
-
-
-
-
-// $('#resEdit').on('click', function(e) {
-//   e.preventDefault();
-//   var cstChk = prompt('Please enter your reservation number.');
-
-//   database.ref('Reservation-Data').on('value', function (results) {
-//     var getResData = results.val();
-//     var data = [];
-
-//     for (var check in getResData)
-//   });
-// })
-
-// function getResData() {
-//   // Listen for changes in comments data
-//   database.ref('Reservation-Data').on('value', function (results) {
-//     // Get all comments stored in the results we received back from Firebase
-//     // Update the DOM
-//   });
-// }
